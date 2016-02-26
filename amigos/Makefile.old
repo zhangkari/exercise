@@ -1,0 +1,20 @@
+
+
+DIRS = "lib" "kernel" "boot" 
+
+all: 
+	@for DIR in $(DIRS) ; \
+        do \
+         make -C $$DIR all ; \
+	done
+	@cp boot/boot.img target/
+
+.phony:clean
+clean:
+	@for DIR in $(DIRS) ; \
+        do \
+         make -C $$DIR clean ; \
+	done
+	@ rm target/* -vf
+
+

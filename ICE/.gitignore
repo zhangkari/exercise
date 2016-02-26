@@ -1,0 +1,19 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Add target directory to ignore
+target/*
+
+# Add empty file to track
+!/target/.gitkeep

@@ -1,0 +1,6 @@
+*.o
+*.exe
+rstest
+master
+slave
+target

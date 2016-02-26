@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- LoginActivity -->
+    <dimen name="login_edittext_width">200dip</dimen>
+
+</resources>
