@@ -1,5 +1,6 @@
 *.o
 *.exe
+RelaySrvr
 rstest
 master
 slave
