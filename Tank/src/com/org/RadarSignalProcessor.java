@@ -2,9 +2,19 @@ package com.org;
 
 public class RadarSignalProcessor extends SignalProcessor
 {
+	public RadarSignalProcessor()
+	{
+		super();
+	}
+
 	public RadarSignalProcessor(int x, int y)
 	{
 		super(x, y);
+	}
+
+	public void updatePosition(int x, int y) {
+		setX(x);
+		setY(y);
 	}
 
 	public boolean isLeftConnected()

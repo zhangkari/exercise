@@ -15,7 +15,7 @@ public class Main implements Runnable
 		ground.setIndex(Config.Map.INDEX);
 		ground.prepareLoad();
 
-		SceneManager.getInstance().addDrawable(ground);
+		SceneManager.getInstance().setBattleground(ground);
 
 		new Thread(this).start();
 	}
@@ -25,6 +25,7 @@ public class Main implements Runnable
 		while(true)
 		{
 //			tank.goForward();
+//			SceneManager.getInstance().invalidate();
 			SceneManager.getInstance().repaint();
 			try
 			{

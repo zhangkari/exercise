@@ -6,6 +6,7 @@ import com.org.Bullet;
 
 public abstract class AbstractTank extends MachineImpl implements IReceiver
 {
+	protected int mRole;	// 0 : friend; 1 : enemy
 	protected Bullet mBullet;
 	protected SignalProcessor mProcessor;
 
@@ -14,6 +15,11 @@ public abstract class AbstractTank extends MachineImpl implements IReceiver
 		super(x, y, Config.Tank.WIDTH, Config.Tank.HEIGHT);
 		mBullet = new Bullet(x, y, Config.Bullet.WIDTH, Config.Bullet.HEIGHT);
 		mProcessor = new RadarSignalProcessor(x, y);
+	}
+
+	public AbstractTank(int x, int y, int role) {
+		this(x, y);
+		mRole = role;
 	}
 
 	public Bullet getBullet()

@@ -1,6 +1,7 @@
 package com.org;
 
 import java.awt.*;
+import java.awt.event.*;
 import java.util.List;
 import java.util.LinkedList;
 
@@ -76,4 +77,42 @@ public abstract class AbstractBattleground extends DrawableComponent
 	{
 		mRadar.send(new MapRadarSignal(mMapInfo));
 	}
+
+	public void keyPressed(KeyEvent e)
+	{
+		if('q' == e.getKeyChar() || 'Q' == e.getKeyChar())
+		{
+			System.exit(0);
+		}
+
+		switch(e.getKeyCode())
+		{
+			case KeyEvent.VK_LEFT:
+				Log.d("left");
+				mTank.rotateLeft();
+				break;
+
+			case KeyEvent.VK_RIGHT:
+				Log.d("right");
+				mTank.rotateRight();
+				break;
+
+			case KeyEvent.VK_UP:
+				Log.d("up");
+				mTank.goBack();
+				break;
+
+			case KeyEvent.VK_DOWN:
+				Log.d("down");
+				mTank.goForward();
+				break;
+
+			case KeyEvent.VK_SPACE:
+				Log.d("space");
+				break;
+		}
+
+	}
+
+
 }

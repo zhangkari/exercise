@@ -17,26 +17,26 @@ public class MachineImpl extends AbstractMachine
 	public void goForward()
 	{
 		if(mCurDirection == DirectionEnum.LEFT)
-			--mX;
+			mX -= mWidth;
 		else if(mCurDirection == DirectionEnum.RIGHT)
-			++mX;
+			mX += mWidth;
 		else if(mCurDirection == DirectionEnum.FRONT)
-			--mY;
+			mY -= mHeight;
 		else 
-			++mY;
+			mY += mHeight;
 	}
 
 
 	public void goBack()
 	{
 		if(mCurDirection == DirectionEnum.LEFT)
-			++mX;
+			mX += mWidth;
 		else if(mCurDirection == DirectionEnum.RIGHT)
-			--mX;
+			mX -= mWidth;
 		else if(mCurDirection == DirectionEnum.FRONT)
-			++mY;
+			mY += mHeight;
 		else 
-			--mY;
+			mY -= mHeight;
 	}
 
 

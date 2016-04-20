@@ -16,7 +16,7 @@ public class PlayerTankFactory extends TankFactory
 
 	public AbstractTank createTank()
 	{
-		AbstractTank tank = new TankImpl(Config.Battleground.X, Config.Battleground.Y);
+		AbstractTank tank = new TankImpl(Config.Battleground.X, Config.Battleground.Y, 0);
 		tank.setFrames(spriteFrames);
 		tank.setCurrentFrame(Config.Tank.RIGHT);
 		return tank;

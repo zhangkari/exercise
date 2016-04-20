@@ -9,6 +9,10 @@ public final class TankImpl extends AbstractTank
 		super(x, y);
 	}
 
+	public TankImpl(int x, int y, int role) {
+		super(x, y, role);
+	}
+
 	public void goForward()
 	{
 		super.setCurrentFrame(Config.Tank.FRONT);

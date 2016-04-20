@@ -4,6 +4,11 @@ public abstract class SignalProcessor extends Component implements Processor
 {
 	protected MapRadarSignal mSignal;
 
+	public SignalProcessor()
+	{
+		super();
+	}
+
 	public SignalProcessor(int x, int y)
 	{
 		super(x, y);
